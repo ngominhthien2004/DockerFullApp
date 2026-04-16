@@ -1,0 +1,28 @@
+Manual test status (updated 2026-04-06 16:19 ICT)
+
+Terminal verification screenshots:
+- terminal/terminal-runtime-check.png
+- terminal/terminal-service-check.png
+
+Commands shown in terminal screenshot:
+- node --version
+- npm --version
+- python3 --version
+- java -version
+- php -v
+- composer --version
+- git --version
+- mongod --version
+- mariadb --version
+- R --version
+
+GUI verification screenshots:
+- gui/gui-vscode.png
+- gui/gui-notepadqq.png
+- gui/gui-github-desktop.png
+- gui/gui-drawio.png
+- gui/gui-codeblocks.png
+- gui/gui-vlc.png
+- gui/gui-libreoffice.png
+- gui/gui-mongodb-compass.png
+- gui/gui-gitk.png

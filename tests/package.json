@@ -1,0 +1,14 @@
+{
+  "name": "combined-image-playwright-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "install:browsers": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.59.1",
+    "playwright": "1.59.1"
+  }
+}

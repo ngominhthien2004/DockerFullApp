@@ -1,0 +1,28 @@
+services:
+  combined-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: combined-dev
+    environment:
+      VNC_PASSWORD: ${COMBINED_VNC_PASSWORD:-devpass}
+      MYSQL_APP_USER: ${COMBINED_MYSQL_USER:-dev}
+      MYSQL_APP_PASSWORD: ${COMBINED_MYSQL_PASSWORD:-devpass}
+      MYSQL_APP_DATABASE: ${COMBINED_MYSQL_DATABASE:-appdb}
+    ports:
+      - "6080:6080"
+      - "3000:3000"
+      - "5000:5000"
+      - "3306:3306"
+      - "27017:27017"
+      - "8081:80"
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -fsS http://localhost:6080/vnc.html >/dev/null && curl -fsS http://localhost:3000/api >/dev/null && curl -fsS http://localhost:5000/api >/dev/null",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 15
+      start_period: 30s
