@@ -1,6 +1,7 @@
 # combined-image
 
 This image runs:
+
 - noVNC desktop at `http://localhost:6080/vnc.html`
 - Node app at `http://localhost:3000`
 - Python app at `http://localhost:5000`
@@ -22,6 +23,7 @@ This image runs:
 ## Installed software and GUI/CLI
 
 GUI apps:
+
 - `mongodb-compass`
 - `code` (Visual Studio Code)
 - `notepadqq`
@@ -37,6 +39,7 @@ GUI apps:
 - `phpmyadmin` (web GUI at `http://localhost:8081/phpmyadmin`)
 
 Non-GUI / CLI apps:
+
 - `node`, `npm`
 - `python`, `pip`
 - `java`, `javac`
@@ -46,6 +49,12 @@ Non-GUI / CLI apps:
 - `mongod`, `mongosh`, `mongodb-database-tools`
 - `7z`
 - `R`
+
+## Hướng dẫn cài đặt
+
+Xem hướng dẫn cài đặt đầy đủ (Docker Hub và GitHub) tại:
+
+- [HUONG_DAN_CAI_DAT.md](HUONG_DAN_CAI_DAT.md)
 
 ## Run container
 
@@ -70,6 +79,7 @@ docker run -d --name combined-dev `
 
 Default noVNC password: `devpass` (override with env var `COMBINED_VNC_PASSWORD`).
 Default MariaDB app user/password/database:
+
 - user: `dev` (override `COMBINED_MYSQL_USER`)
 - password: `devpass` (override `COMBINED_MYSQL_PASSWORD`)
 - database: `appdb` (override `COMBINED_MYSQL_DATABASE`)
@@ -108,6 +118,7 @@ R --version
 ```
 
 Git GUI apps installed in desktop:
+
 - `gitk`
 - `git gui`
 - `github-desktop`
@@ -125,6 +136,7 @@ MongoDB Compass is bundled in this image as a desktop GUI app.
 ## Open GUI apps
 
 Use one of these ways:
+
 1. Open noVNC (`http://localhost:6080/vnc.html`), then run command in desktop terminal.
 2. Run from host terminal with `docker exec` (app appears in noVNC desktop).
 
@@ -298,9 +310,11 @@ powershell -ExecutionPolicy Bypass -File .\run-e2e.ps1
 ```
 
 The script will:
+
 1. Build and start `combined-dev`
 2. Wait until healthcheck passes (noVNC + node + python)
 3. Run Playwright tests
 4. Stop container automatically
-#   D o c k e r F u l l A p p  
- 
+   #   D o c k e r F u l l A p p 
+    
+    
